@@ -1,7 +1,7 @@
 title: "Michael R. Berthold"
 description: "Computer scientist, speaker, publicist, and AI & data science pioneer."
-baseurl: "/mb"
-url: "https://lacahelpme.github.io"
+url: "https://michael-berthold.github.io"
+baseurl: ""
 markdown: kramdown
 permalink: pretty
 
