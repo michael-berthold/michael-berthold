@@ -1,0 +1,30 @@
+title: "Michael R. Berthold"
+description: "Computer scientist, speaker, publicist, and AI & data science pioneer."
+baseurl: "/mb"
+url: "https://lacahelpme.github.io"
+markdown: kramdown
+permalink: pretty
+
+collections:
+  books:
+    output: false
+  publications:
+    output: false
+  musings:
+    output: true
+    permalink: /musings/:name/
+  videos:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+      lang: en
+
+  - scope:
+      path: ""
+      type: musings
+    values:
+      layout: article
