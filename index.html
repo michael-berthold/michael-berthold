@@ -1,0 +1,269 @@
+---
+layout: default
+title: Home
+seo_title: Michael Berthold – Data Scientist and AI expert - Projects and Insights
+seo_description:  Discover the personal website of Michael Berthold, focusing on data science, machine learning, and AI. Explore insights, projects, and publications. Connect for collaboration and networking.
+lang: en
+permalink: /
+---
+
+<section class="hero-band">
+  <div class="container hero-shell">
+    <div class="hero-visual">
+      <img src="{{ '/assets/img/general/Michael-Berthold-About-Me2.webp' | relative_url }}" alt="Portrait illustration of Michael Berthold">
+    </div>
+
+    <div class="hero-panel">
+      <p class="hero-kicker">Data Scientist</p>
+      <h1 class="hero-title">
+        <span>Michael R.</span>
+        <span>Berthold</span>
+      </h1>
+
+      <div class="hero-actions">
+        <a class="button button-accent" href="{{ '/#about' | relative_url }}">GET TO KNOW ME</a>
+        <span class="hero-arrow" aria-hidden="true">↓</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-light section" id="about">
+  <div class="container about-light-grid">
+    <div class="about-main">
+      <h2 class="section-title">About Me</h2>
+      <p>My journey has taken me from academic research both in Europe and the US to small and dynamic startups in Silicon Valley, from coordinating European research projects to scaling a company from the ground up to over $40M revenue.<br>
+
+The common theme has always been to educate and grow people in an environment where innovation is key.<br>
+
+What drives me is the opportunity to help others navigate challenges, whether that’s through strategic advice, hands-on problem solving, or simply making difficult concepts accessible. I believe the best solutions come from a mix of rigorous thinking, empathy, and a willingness to experiment.
+<br>If you think you have a problem that might pique my curiosity, let’s talk.</p>
+    </div>
+
+    <div class="about-side">
+      <div class="about-side-item">
+        <h3>Speaker</h3>
+        <p>I’m happy to share my perspectives on data science and AI in talks and panel discussions.</p>
+      </div>
+
+      <div class="about-side-item">
+        <h3>Publicist</h3>
+        <p>In my publications, I explore current developments in data science and AI, providing practical, hands-on insights.</p>
+      </div>
+
+      <div class="about-side-item">
+        <h3>AI &amp; Data Science Pioneer</h3>
+        <p>Advancing data science and AI is a constant focus of my work.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bio-band section">
+  <div class="container bio-grid">
+    <div class="bio-image">
+      <img src="{{ '/assets/img/general/about-me2.webp' | relative_url }}" alt="Portrait illustration of Michael Berthold">
+    </div>
+
+    <div class="bio-copy">
+      <div class="bio-row">
+        <div class="bio-label">Bio</div>
+        <div class="bio-text">
+          <strong>Data scientist, computer scientist and entrepreneur</strong> specializing in machine learning, data mining, and knowledge discovery. Expert in visual workflows that make complex data analysis intuitive and accessible.
+<strong>Studied computer science at the University of Karlsruhe</strong>, complemented by international research experience at Carnegie Mellon University and the University of California, Berkeley.
+<strong>From 2003 to 2017, served as Professor of Bioinformatics and Information Mining</strong> at the University of Konstanz. Recipient of the KS Fu Award from the North American Fuzzy Information Processing Society and awarded an honorary professorship at Óbuda University in Budapest.
+<strong>Author of over 250 scientific publications</strong> and technical books.
+<strong>Until 2025, CEO of the co-founded data analytics platform KNIME</strong>, which has grown into a global community with several hundred thousand users.
+        </div>
+      </div>
+
+      <div class="bio-row">
+        <div class="bio-label">My Approach</div>
+        <div class="bio-text">
+          At heart, I’m curious about data science, machine learning, and AI—not just as technologies, but as tools to solve real-world problems and create meaningful impact. I’ve spent years translating complex ideas into clear, actionable insights, and I thrive at the intersection of innovation and execution.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="books-band section">
+  <div class="container">
+    <div class="books-head">
+      <h2 class="section-title section-title-light">Books and Textbooks</h2>
+
+      <a class="books-tip"
+         href="https://link.springer.com/content/pdf/10.1007/978-3-642-31830-6.pdf"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="books-tip-label">Tip</span>
+        <span>
+          You have full access to this
+          <span class="books-tip-highlight">open access</span>
+          book: Bisociative Knowledge Discovery
+        </span>
+      </a>
+    </div>
+
+    <div class="books-grid books-grid-home">
+      {% assign latest_books = site.books | sort: 'date' | reverse | slice: 0, 3 %}
+      {% for book in latest_books %}
+      <article class="book-card-home">
+        <div class="book-card-image">
+          <img src="{{ book.cover | relative_url }}" alt="{{ book.alt }}">
+        </div>
+        <div class="book-card-content">
+          <h3 class="book-card-title">{{ book.title }}</h3>
+          <p class="book-card-authors">{{ book.author }}</p>
+          <p class="book-card-year">({{ book.year }})</p>
+          <p class="book-card-excerpt">{{ book.excerpt }}</p>
+
+          {% if book.external_url %}
+          <a class="button-outline {% if book.button_style == 'accent' %}button-outline-accent{% else %}button-outline-light{% endif %}"
+             href="{{ book.external_url }}"
+             target="_blank"
+             rel="noopener noreferrer">
+            {{ book.button_label }}
+          </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="video-teaser section">
+  <div class="container video-teaser-grid">
+    <div class="video-teaser-copy">
+      <h2 class="video-teaser-title">Step into the world<br>of data-insights,<br>AI and Analytics</h2>
+      <p>
+        Discover videos from events on Data Analytics and Data Science—with inspiring keynotes, interactive workshops, and practical examples.
+      </p>
+      <a class="button button-accent" href="{{ '/videos/' | relative_url }}">SEE VIDEOS</a>
+    </div>
+
+    <div class="video-teaser-media">
+      {% assign latest_video = site.videos | sort: 'date' | reverse | first %}
+      {% if latest_video %}
+
+        {% if latest_video.video_html %}
+          {{ latest_video.video_html }}
+        {% elsif latest_video.thumbnail %}
+          <img src="{{ latest_video.thumbnail | relative_url }}" alt="{{ latest_video.alt | default: latest_video.title }}">
+        {% endif %}
+
+        <p class="video-teaser-caption">
+          {% if latest_video.event_name and latest_video.event_name != "" %}
+            <span class="video-teaser-event">{{ latest_video.event_name }}</span><br>
+          {% endif %}
+          <span class="video-teaser-talk-title">{{ latest_video.title }}</span>
+        </p>
+
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="musings-band section">
+  <div class="container">
+    <div class="musings-band-head">
+      <a class="button button-accent" href="{{ '/musings/' | relative_url }}">SEE ALL MUSINGS</a>
+      <h2 class="section-title section-title-light">Ideas &amp; Perspectives</h2>
+    </div>
+
+    <div class="musings-band-grid">
+      {% assign latest_musings = site.musings | sort: 'date' | reverse | slice: 0, 3 %}
+      {% for post in latest_musings %}
+      
+      <a href="{{ post.url | relative_url }}" class="musing-home-card musing-home-card-link">
+        
+        <div class="musing-tile {% if forloop.first %}musing-tile-accent{% elsif forloop.index == 2 %}musing-tile-mid{% else %}musing-tile-light{% endif %}">
+          <div class="musing-tile-top">
+            <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
+            <div class="musing-tile-arrow">→</div>
+          </div>
+
+          <div class="musing-tile-body">
+            <h3>{{ post.title }}</h3>
+            <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
+          </div>
+        </div>
+
+        <p class="musing-tile-excerpt">
+          {{ post.excerpt }}
+        </p>
+
+        <div class="musing-tile-actions">
+          <span class="button-outline button-outline-light">
+            Read more
+          </span>
+        </div>
+
+      </a>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="publications-band section">
+  <div class="container">
+    <div class="publications-band-head">
+      <h2 class="section-title section-title-light">Publications</h2>
+      <div class="publications-band-actions">
+        <a class="button button-dark" href="{{ '/contact/' | relative_url }}">PRESS CONTACT</a>
+        <a class="button button-accent" href="{{ '/publications/' | relative_url }}">ALL PUBLICATIONS</a>
+      </div>
+    </div>
+
+    <div class="publications-home-grid">
+      {% assign featured_publications = site.publications | where: "featured", true | sort: "date" | reverse %}
+      {% for post in featured_publications limit: 4 %}
+      <article class="publication-home-card">
+
+        <div class="publication-home-thumb">
+          <img src="{{ post.cover | relative_url }}" alt="{{ post.alt }}">
+        </div>
+
+        <div class="publication-home-body">
+          {% if post.source_name %}
+            <p class="publication-home-source">{{ post.source_name }}</p>
+          {% endif %}
+
+          <h3 class="publication-home-title">{{ post.title }}</h3>
+
+          {% if post.date %}
+          <p class="publication-home-date">{{ post.date | date: "%-d %B %Y" }}</p>
+          {% endif %}
+
+          {% if post.excerpt %}
+          <p class="publication-home-excerpt">{{ post.excerpt }}</p>
+          {% endif %}
+
+          <div class="publication-home-links">
+            {% if post.link_1_url and post.link_1_url != "" %}
+              <a class="publication-home-readmore"
+                 href="{{ post.link_1_url }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ post.link_1_label }}
+              </a>
+            {% endif %}
+
+            {% if post.link_2_url and post.link_2_url != "" %}
+              <a class="publication-home-readmore"
+                 href="{{ post.link_2_url }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ post.link_2_label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

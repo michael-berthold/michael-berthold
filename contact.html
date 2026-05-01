@@ -1,0 +1,81 @@
+---
+layout: default
+title: Contact
+seo_title: Contact Michael Berthold – Get in Touch
+seo_description: Contact Michael Berthold for business inquiries, collaborations, consulting, or networking. Reach out via email  for a prompt response.
+---
+
+<section class="subpage-intro">
+  <div class="container">
+    <h1 class="subpage-intro-title">Contact</h1>
+    <p class="subpage-intro-text">
+      Looking to connect with Michael Berthold? Whether you have a business inquiry, collaboration idea, or general question, feel free to get in touch. Michael is open to professional opportunities, partnerships, and networking across industries.
+    </p>
+  </div>
+</section>
+
+<section class="section contact-page-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-block">
+        <h2 class="contact-block-title">Press Contact</h2>
+
+        <div class="contact-icon-list">
+          <div class="contact-icon-item">
+            <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Adress.png' | relative_url }}" alt="Address icon">
+            <span>
+              {% for line in site.data.contact_page.press_contact.address_lines %}
+                {{ line }}{% unless forloop.last %}<br>{% endunless %}
+              {% endfor %}
+            </span>
+          </div>
+
+          <div class="contact-icon-item">
+            <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Phone.png' | relative_url }}" alt="Phone icon">
+            <a href="tel:{{ site.data.contact_page.press_contact.phone_link }}">
+              {{ site.data.contact_page.press_contact.phone_display }}
+            </a>
+          </div>
+
+          <div class="contact-icon-item">
+            <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Message.png' | relative_url }}" alt="Email icon">
+            <a href="mailto:{{ site.data.contact_page.press_contact.email }}">
+              {{ site.data.contact_page.press_contact.email }}
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-block">
+        <h2 class="contact-block-title">Where to follow</h2>
+
+        <div class="contact-follow-list">
+          <div class="contact-follow-row">
+            <h3>LinkedIn</h3>
+            <p>
+              <a href="{{ site.data.contact_page.follow.linkedin_url }}" target="_blank" rel="noopener noreferrer">
+                {{ site.data.contact_page.follow.linkedin_url }}
+              </a>
+            </p>
+          </div>
+
+          <div class="contact-follow-row">
+            <h3>Bluesky</h3>
+            <p>
+              <a href="{{ site.data.contact_page.follow.bluesky_url }}" target="_blank" rel="noopener noreferrer">
+                {{ site.data.contact_page.follow.bluesky_url }}
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="contact-downloads">
+      <h2 class="contact-block-title">Press Room Downloads</h2>
+      <p>{{ site.data.contact_page.downloads_text }}</p>
+    </div>
+  </div>
+</section>

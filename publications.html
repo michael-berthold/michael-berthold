@@ -1,0 +1,159 @@
+---
+layout: default
+title: Publications
+seo_title: Michael Berthold – Selected Books and Publications on Data Science & AI
+seo_description: Find books and publications by Michael Berthold offering accessible introductions and insights into data science, machine learning, and artificial intelligence.
+lang: en
+permalink: /publications/
+---
+
+<!-- INTRO / HERO -->
+
+<section class="subpage-intro">
+  <div class="container">
+    <h1 class="subpage-intro-title">Publications</h1>
+    <p class="subpage-intro-text">
+      Michael Berthold has published extensively on key concepts, methods, and accessible applications in data science, machine learning, and artificial intelligence.
+    </p>
+  </div>
+</section>
+
+<!-- COMMENTARY / ARTICLES -->
+
+<section class="publications-band section publications-commentary-section">
+  <div class="container">
+    <div class="publications-band-head">
+      <h2 class="section-title section-title-light">
+        Selected Industry Commentary
+      </h2>
+
+      <div class="publications-band-actions">
+        <a class="button button-dark" href="{{ '/contact/' | relative_url }}">
+          PRESS CONTACT
+        </a>
+      </div>
+    </div>
+
+    <div class="publications-home-grid">
+      {% assign featured_publications = site.publications | where: "featured", true | sort: "date" | reverse %}
+
+      {% for post in featured_publications limit: 6 %}
+      <article class="publication-home-card">
+
+        <div class="publication-home-thumb">
+          <img src="{{ post.cover | relative_url }}" alt="{{ post.alt }}">
+        </div>
+
+        <div class="publication-home-body">
+          {% if post.source_name %}
+            <p class="publication-home-source">{{ post.source_name }}</p>
+          {% endif %}
+
+          <h3 class="publication-home-title">{{ post.title }}</h3>
+
+          {% if post.date %}
+          <p class="publication-home-date">
+            {{ post.date | date: "%-d %B %Y" }}
+          </p>
+          {% endif %}
+
+          {% if post.excerpt %}
+          <p class="publication-home-excerpt">{{ post.excerpt }}</p>
+          {% endif %}
+
+          <div class="publication-home-links">
+            {% if post.link_1_url and post.link_1_url != "" %}
+              <a class="publication-home-readmore"
+                 href="{{ post.link_1_url }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ post.link_1_label }}
+              </a>
+            {% endif %}
+
+            {% if post.link_2_url and post.link_2_url != "" %}
+              <a class="publication-home-readmore"
+                 href="{{ post.link_2_url }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ post.link_2_label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- TEXT LISTS -->
+
+<section class="subpage-text-lists section">
+  <div class="container">
+
+    <div class="subpage-text-block">
+      <h2 class="subpage-text-title">Industry Commentary</h2>
+
+      <ul class="subpage-text-list">
+        {% assign featured_overflow = featured_publications | slice: 6, 1000 %}
+
+        {% for post in featured_overflow %}
+        <li>
+          {{ post.title }}
+          {% if post.source_name %} – {{ post.source_name }}{% endif %}
+          {% if post.author_line %} – {{ post.author_line }}{% endif %}
+          {% if post.date %} – {{ post.date | date: "%-d %B %Y" }}{% endif %}
+
+          {% if post.link_1_url and post.link_1_url != "" %}
+            –
+            <a href="{{ post.link_1_url }}" target="_blank" rel="noopener noreferrer">
+              {{ post.link_1_label }}
+            </a>
+          {% endif %}
+
+          {% if post.link_2_url and post.link_2_url != "" %}
+            –
+            <a href="{{ post.link_2_url }}" target="_blank" rel="noopener noreferrer">
+              {{ post.link_2_label }}
+            </a>
+          {% endif %}
+        </li>
+        {% endfor %}
+
+        {% assign non_featured_publications = site.publications | where_exp: "item", "item.featured != true" | sort: "date" | reverse %}
+
+        {% for post in non_featured_publications %}
+        <li>
+          {{ post.title }}
+          {% if post.source_name %} – {{ post.source_name }}{% endif %}
+          {% if post.author_line %} – {{ post.author_line }}{% endif %}
+          {% if post.date %} – {{ post.date | date: "%-d %B %Y" }}{% endif %}
+
+          {% if post.link_1_url and post.link_1_url != "" %}
+            –
+            <a href="{{ post.link_1_url }}" target="_blank" rel="noopener noreferrer">
+              {{ post.link_1_label }}
+            </a>
+          {% endif %}
+
+          {% if post.link_2_url and post.link_2_url != "" %}
+            –
+            <a href="{{ post.link_2_url }}" target="_blank" rel="noopener noreferrer">
+              {{ post.link_2_label }}
+            </a>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <!-- MD LIST -->
+    <div class="subpage-text-block publication-markdown-list">
+      {% capture publications_full_list %}{% include_relative publication-list/publications.md %}{% endcapture %}
+      {{ publications_full_list | markdownify }}
+    </div>
+
+  </div>
+</section>

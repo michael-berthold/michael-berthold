@@ -1,0 +1,57 @@
+---
+layout: default
+title: Videos
+seo_title: Michael Berthold Videos – Panel talks & Presentations
+seo_description: Watch videos by Michael Berthold including panel talks and presentations. Explore insights, projects, and professional highlights on Data Science, AI & Machine Learning.
+lang: en
+permalink: /videos/
+---
+
+<section class="subpage-intro">
+  <div class="container">
+    <h1 class="subpage-intro-title">Conference Talks &amp; Presentations</h1>
+    <p class="subpage-intro-text">
+      Discover a selection of talks, conference and event videos by Michael Berthold, featuring keynotes, workshops, and practical insights into data science and AI.
+    </p>
+  </div>
+</section>
+
+<section class="section videos-listing">
+  <div class="container">
+    {% assign all_videos = site.videos | sort: 'date' | reverse %}
+
+    <div class="videos-grid">
+      {% for video in all_videos %}
+      <article class="video-card">
+
+        <div class="video-card-media">
+          {% if video.video_html %}
+            {{ video.video_html }}
+          {% elsif video.thumbnail %}
+            <img 
+              src="{{ video.thumbnail | relative_url }}" 
+              alt="{{ video.alt | default: video.title }}">
+          {% endif %}
+        </div>
+
+        <div class="video-card-body">
+          <h2 class="video-card-title">{{ video.title }}</h2>
+
+          {% if video.date %}
+          <p class="video-card-date">
+            {{ video.date | date: "%B %d, %Y" }}
+          </p>
+          {% endif %}
+
+          {% if video.excerpt %}
+          <p class="video-card-excerpt">
+            {{ video.excerpt }}
+          </p>
+          {% endif %}
+        </div>
+
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

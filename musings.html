@@ -1,0 +1,46 @@
+---
+layout: default
+title: Musings
+seo_title: Michael Berthold – Musings on Data Science, Machine Learning & AI
+seo_description: In his musings, Michael Berthold reflects on data science, machine learning, and artificial intelligence. Explore how these approaches can be applied in practice within organizations.
+lang: en
+permalink: /musings/
+---
+
+<section class="subpage-intro">
+  <div class="container">
+    <h1 class="subpage-intro-title">Recent Musings</h1>
+    <p class="subpage-intro-text">
+      What does it take to make data science, machine learning, and AI truly impactful in practice? Reflections, ideas, and insights on real-world challenges and current developments in a data-driven world.
+    </p>
+  </div>
+</section>
+
+<section class="section musings-listing musings-listing-cards">
+  <div class="container">
+    {% assign all_musings = site.musings | sort: 'date' | reverse %}
+    <div class="musings-subpage-grid">
+      {% for post in all_musings %}
+      <a href="{{ post.url | relative_url }}" class="musing-home-card musing-home-card-subpage musing-home-card-link">
+        <div class="musing-tile musing-tile-subpage {% if forloop.first %}musing-tile-accent{% else %}musing-tile-dark{% endif %}">
+          <div class="musing-tile-top">
+            <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
+            <div class="musing-tile-arrow">→</div>
+          </div>
+
+          <div class="musing-tile-body">
+            <h2>{{ post.title }}</h2>
+            <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
+          </div>
+
+          <div class="musing-tile-actions">
+            <span class="button-outline {% if forloop.first %}button-outline-dark{% else %}button-outline-light{% endif %}">
+              Read more
+            </span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
