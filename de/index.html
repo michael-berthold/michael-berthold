@@ -1,0 +1,264 @@
+---
+layout: default
+title: Startseite
+seo_title: Michael Berthold – Data Scientist und KI-Experte - Projekte und Einblicke
+seo_description: Entdecken Sie die persönliche Website von Michael Berthold mit Fokus auf Data Science, Machine Learning und KI. Erkunden Sie Einblicke, Projekte und Publikationen. Vernetzen Sie sich für Zusammenarbeit und Austausch.
+lang: de
+permalink: /de/
+---
+
+<section class="hero-band">
+  <div class="container hero-shell">
+    <div class="hero-visual">
+      <img src="{{ '/assets/img/general/Michael-Berthold-About-Me2.webp' | relative_url }}" alt="Porträtillustration von Michael Berthold">
+    </div>
+
+    <div class="hero-panel">
+      <p class="hero-kicker">Data Scientist</p>
+      <h1 class="hero-title">
+        <span>Michael R.</span>
+        <span>Berthold</span>
+      </h1>
+
+      <div class="hero-actions">
+        <a class="button button-accent" href="{{ '/de/#about' | relative_url }}">LERNEN SIE MICH KENNEN</a>
+        <span class="hero-arrow" aria-hidden="true">↓</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-light section" id="about">
+  <div class="container about-light-grid">
+    <div class="about-main">
+      <h2 class="section-title">Über mich</h2>
+      <p>Mein Weg hat mich von der akademischen Forschung an deutschen und amerikanischen Universitäten über Startups und die Leitung eines Forschungslabors im Silicon Valley zurück nach Europa geführt. Hier habe ich nach einer Professur an der Uni Konstanz, wo ich unter anderem EU-Projekte koordiniert habe, wieder den Weg in die Industrie eingeschlagen und eine Softwarefirma von null auf über 40 Millionen Euro Umsatz skaliert.</p>
+      <p>Mein Antrieb ist es, Unternehmen und Teams dabei zu unterstützen, komplexe Herausforderungen im Bereich Daten und KI zu meistern – sei es durch strategische Beratung, pragmatische Problemlösung oder die Fähigkeit, komplexe Sachverhalte verständlich zu machen.</p>
+      <p>Haben Sie eine spannende Herausforderung, bei der ich Sie unterstützen kann? Dann freue ich mich auf Ihre Mail und den Austausch!</p>
+    </div>
+
+    <div class="about-side">
+      <div class="about-side-item">
+        <h3>Speaker</h3>
+        <p>Ich teile meine Perspektiven zu Data Science und KI gerne in Vorträgen und Podiumsdiskussionen.</p>
+      </div>
+
+      <div class="about-side-item">
+        <h3>Autor</h3>
+        <p>In meinen Veröffentlichungen beleuchte ich aktuelle Entwicklungen in Data Science und KI und vermittle praxisnahe, anwendungsorientierte Einblicke.</p>
+      </div>
+
+      <div class="about-side-item">
+        <h3>Pionier für Data Science und KI</h3>
+        <p>Die Weiterentwicklung von Data Science und KI steht im Mittelpunkt meiner Arbeit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bio-band section">
+  <div class="container bio-grid">
+    <div class="bio-image">
+      <img src="{{ '/assets/img/general/about-me2.webp' | relative_url }}" alt="Porträtillustration von Michael Berthold">
+    </div>
+
+    <div class="bio-copy">
+      <div class="bio-row">
+        <div class="bio-label">Bio</div>
+        <div class="bio-text">
+          <strong>Data Scientist, Informatiker und Unternehmer</strong> mit Spezialisierung auf Machine Learning, Data Mining und Künstliche Intelligenz. Experte für Low-Code-Ansätze, die komplexe Datenanalysen intuitiv und zugänglich machen.
+          <strong>Studium und Promotion der Informatik an der Universität Karlsruhe</strong>, ergänzt durch internationale Forschungserfahrung an der Carnegie Mellon University und der University of California, Berkeley.
+          <strong>Von 2003 bis 2017 Professor für Bioinformatik und Information Mining</strong> an der Universität Konstanz. IEEE Fellow und Ehrenprofessor an der Óbuda-Universität in Budapest.
+          <strong>Autor von über 250 wissenschaftlichen Publikationen</strong> und Fachbüchern.
+          <strong>Bis 2025 CEO der mitgegründeten Datenanalysefirma KNIME</strong>, die zu einer globalen Community mit mehreren Hunderttausend Nutzerinnen und Nutzern gewachsen ist.
+        </div>
+      </div>
+
+      <div class="bio-row">
+        <div class="bio-label">Mein Ansatz</div>
+        <div class="bio-text">
+          Im Kern treibt mich die Neugier auf Data Science, Machine Learning und KI an. Für mich sind diese Technologien kein Selbstzweck, sondern Werkzeuge, um echte Probleme zu lösen und messbaren Impact zu schaffen. Seit vielen Jahren übersetze ich komplexe Ideen in klare, umsetzbare Strategien. Mein Element ist die Schnittstelle zwischen visionärer Innovation und pragmatischer Umsetzung, denn die besten Lösungen entstehen dort, wo analytisches Denken, Empathie und Experimentierfreude aufeinandertreffen.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="books-band section">
+  <div class="container">
+    <div class="books-head">
+      <h2 class="section-title section-title-light">Bücher und Lehrbücher</h2>
+
+      <a class="books-tip"
+         href="https://link.springer.com/content/pdf/10.1007/978-3-642-31830-6.pdf"
+         target="_blank"
+         rel="noopener noreferrer">
+        <span class="books-tip-label">Tipp</span>
+        <span>
+          Sie haben vollständigen Zugriff auf dieses
+          <span class="books-tip-highlight">Open-Access</span>
+          Buch: Bisociative Knowledge Discovery
+        </span>
+      </a>
+    </div>
+
+    <div class="books-grid books-grid-home">
+      {% assign latest_books = site.books | sort: 'date' | reverse | slice: 0, 3 %}
+      {% for book in latest_books %}
+      <article class="book-card-home">
+        <div class="book-card-image">
+          <img src="{{ book.cover | relative_url }}" alt="{{ book.alt }}">
+        </div>
+        <div class="book-card-content">
+          <h3 class="book-card-title">{{ book.title }}</h3>
+          <p class="book-card-authors">{{ book.author }}</p>
+          <p class="book-card-year">({{ book.year }})</p>
+          <p class="book-card-excerpt">{{ book.excerpt }}</p>
+
+          {% if book.external_url %}
+          <a class="button-outline {% if book.button_style == 'accent' %}button-outline-accent{% else %}button-outline-light{% endif %}"
+             href="{{ book.external_url }}"
+             target="_blank"
+             rel="noopener noreferrer">
+            {{ book.button_label }}
+          </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="video-teaser section">
+  <div class="container video-teaser-grid">
+    <div class="video-teaser-copy">
+      <h2 class="video-teaser-title">Tauchen Sie ein in die <br>Welt von Data Insights,<br>KI und Analytics</h2>
+      <p>
+        Hier finden Sie Videos von Veranstaltungen zu Data Analytics und Data Science – mit inspirierenden Keynotes, interaktiven Workshops und praxisnahen Beispielen.
+      </p>
+      <a class="button button-accent" href="{{ '/videos/' | relative_url }}">VIDEOS ANSEHEN</a>
+    </div>
+
+    <div class="video-teaser-media">
+      {% assign latest_video = site.videos | sort: 'date' | reverse | first %}
+      {% if latest_video %}
+
+        {% if latest_video.video_html %}
+          {{ latest_video.video_html }}
+        {% elsif latest_video.thumbnail %}
+          <img src="{{ latest_video.thumbnail | relative_url }}" alt="{{ latest_video.alt | default: latest_video.title }}">
+        {% endif %}
+
+        <p class="video-teaser-caption">
+          {% if latest_video.event_name and latest_video.event_name != "" %}
+            <span class="video-teaser-event">{{ latest_video.event_name }}</span><br>
+          {% endif %}
+          <span class="video-teaser-talk-title">{{ latest_video.title }}</span>
+        </p>
+
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section class="musings-band section">
+  <div class="container">
+    <div class="musings-band-head">
+      <a class="button button-accent" href="{{ '/musings/' | relative_url }}">ALLE MUSINGS ANSEHEN</a>
+      <h2 class="section-title section-title-light">Ideen &amp; Perspektiven</h2>
+    </div>
+
+    <div class="musings-band-grid">
+      {% assign latest_musings = site.musings | sort: 'date' | reverse | slice: 0, 3 %}
+      {% for post in latest_musings %}
+      
+      <a href="{{ post.url | relative_url }}" class="musing-home-card musing-home-card-link">
+        <div class="musing-tile {% if forloop.first %}musing-tile-accent{% elsif forloop.index == 2 %}musing-tile-mid{% else %}musing-tile-light{% endif %}">
+          <div class="musing-tile-top">
+            <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
+            <div class="musing-tile-arrow">→</div>
+          </div>
+
+          <div class="musing-tile-body">
+            <h3>{{ post.title }}</h3>
+            <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
+          </div>
+        </div>
+
+        <p class="musing-tile-excerpt">
+          {{ post.excerpt }}
+        </p>
+
+        <div class="musing-tile-actions">
+          <span class="button-outline button-outline-light">
+            Weiterlesen
+          </span>
+        </div>
+      </a>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="publications-band section">
+  <div class="container">
+    <div class="publications-band-head">
+      <h2 class="section-title section-title-light">Publikationen</h2>
+      <div class="publications-band-actions">
+        <a class="button button-dark" href="{{ '/contact/' | relative_url }}">PRESSEKONTAKT</a>
+        <a class="button button-accent" href="{{ '/publications/' | relative_url }}">ALLE PUBLIKATIONEN</a>
+      </div>
+    </div>
+
+    <div class="publications-home-grid">
+      {% assign featured_publications = site.publications | where: "featured", true | sort: "date" | reverse %}
+      {% for post in featured_publications limit: 4 %}
+      <article class="publication-home-card">
+
+        <div class="publication-home-thumb">
+          <img src="{{ post.cover | relative_url }}" alt="{{ post.alt }}">
+        </div>
+
+        <div class="publication-home-body">
+          {% if post.source_name %}
+            <p class="publication-home-source">{{ post.source_name }}</p>
+          {% endif %}
+
+          <h3 class="publication-home-title">{{ post.title }}</h3>
+
+          {% if post.date %}
+          <p class="publication-home-date">{{ post.date | date: "%-d %B %Y" }}</p>
+          {% endif %}
+
+          {% if post.excerpt %}
+          <p class="publication-home-excerpt">{{ post.excerpt }}</p>
+          {% endif %}
+
+          <div class="publication-home-links">
+            {% if post.link_1_url and post.link_1_url != "" %}
+              <a class="publication-home-readmore"
+                 href="{{ post.link_1_url }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ post.link_1_label }}
+              </a>
+            {% endif %}
+
+            {% if post.link_2_url and post.link_2_url != "" %}
+              <a class="publication-home-readmore"
+                 href="{{ post.link_2_url }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                {{ post.link_2_label }}
+              </a>
+            {% endif %}
+          </div>
+        </div>
+
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
