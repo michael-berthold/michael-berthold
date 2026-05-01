@@ -1,0 +1,50 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-copy">
+      
+      <h2>
+        {% if page.lang == 'de' %}
+          Kontakt
+        {% else %}
+          Get in Touch
+        {% endif %}
+      </h2>
+
+      <div class="footer-contact-list footer-contact-list-icons">
+        
+        <div class="footer-contact-item">
+          <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Adress.png' | relative_url }}" alt="Address icon">
+          <span>{{ site.data.site_settings.address }}</span>
+        </div>
+
+        <div class="footer-contact-item">
+          <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Phone.png' | relative_url }}" alt="Phone icon">
+          <a href="tel:{{ site.data.site_settings.phone | replace: 'Tel: ', '' | replace: ' ', '' }}">
+            {{ site.data.site_settings.phone }}
+          </a>
+        </div>
+
+        <div class="footer-contact-item">
+          <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Message.png' | relative_url }}" alt="Email icon">
+          <a href="mailto:{{ site.data.site_settings.email }}">
+            {{ site.data.site_settings.email }}
+          </a>
+        </div>
+
+        <div class="footer-contact-item">
+          <img src="{{ '/assets/img/general/Michael-Berthold-Website-Icons-Web.png' | relative_url }}" alt="Web icon">
+          <a href="{{ site.data.site_settings.linkedin_url }}" target="_blank" rel="noopener noreferrer">
+            LinkedIn
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-figure" aria-hidden="true">
+      <img src="{{ '/assets/img/general/Michael-Berthold-Contact2.webp' | relative_url }}" alt="">
+    </div>
+  </div>
+
+  <div class="footer-accent-bar"></div>
+</footer>

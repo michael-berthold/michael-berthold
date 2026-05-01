@@ -1,0 +1,93 @@
+<header class="site-header {% if page.url == '/' or page.url == '/de/' %}site-header-home{% else %}site-header-subpage{% endif %}">
+  <div class="container header-inner">
+    
+    <a class="logo logo-image" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/img/general/Michael-Berthold-Logo.png' | relative_url }}" alt="MB logo">
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+
+    <label for="nav-toggle" class="nav-toggle-label" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+
+    <nav class="primary-nav" aria-label="Primary navigation">
+      <ul>
+        
+        <!-- ABOUT -->
+        <li>
+          <a
+            href="{% if page.lang == 'de' %}{{ '/de/#about' | relative_url }}{% else %}{{ '/#about' | relative_url }}{% endif %}"
+            class="{% if page.url == '/' or page.url == '/de/' %}active{% endif %}">
+            
+            {% if page.lang == 'de' %}
+              Über Mich
+            {% else %}
+              ABOUT ME
+            {% endif %}
+            
+          </a>
+        </li>
+
+        <!-- MUSINGS -->
+        <li>
+          <a href="{{ '/musings/' | relative_url }}" class="{% if page.url contains '/musings' %}active{% endif %}">
+            {% if page.lang == 'de' %}
+              Einblicke
+            {% else %}
+              MUSINGS
+            {% endif %}
+          </a>
+        </li>
+
+        <!-- VIDEOS -->
+        <li>
+          <a href="{{ '/videos/' | relative_url }}" class="{% if page.url contains '/videos' %}active{% endif %}">
+            {% if page.lang == 'de' %}
+              Videos
+            {% else %}
+              VIDEOS
+            {% endif %}
+          </a>
+        </li>
+
+        <!-- PUBLICATIONS -->
+        <li>
+          <a href="{{ '/publications/' | relative_url }}" class="{% if page.url contains '/publications' %}active{% endif %}">
+            {% if page.lang == 'de' %}
+              Publikationen
+            {% else %}
+              PUBLICATIONS
+            {% endif %}
+          </a>
+        </li>
+
+        <!-- CONTACT -->
+        <li>
+          <a href="{{ '/contact/' | relative_url }}" class="{% if page.url contains '/contact' %}active{% endif %}">
+            {% if page.lang == 'de' %}
+              Kontakt
+            {% else %}
+              CONTACT
+            {% endif %}
+          </a>
+        </li>
+
+        <!-- LANGUAGE SWITCH (ONLY HOME) -->
+        {% if page.url == '/' or page.url == '/de/' %}
+        <li class="lang-switch">
+          {% if page.lang == 'de' %}
+            <a href="{{ '/' | relative_url }}">EN</a>
+          {% else %}
+            <a href="{{ '/de/' | relative_url }}">DE</a>
+          {% endif %}
+        </li>
+        {% endif %}
+
+      </ul>
+    </nav>
+
+  </div>
+</header>

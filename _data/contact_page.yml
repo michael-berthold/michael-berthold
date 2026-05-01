@@ -1,0 +1,17 @@
+press_contact:
+  address_lines:
+    - "123 Anywhere St."
+    - "Any City, ST 12345"
+  phone_label: "Phone"
+  phone_display: "(123) 456-7890"
+  phone_link: "1234567890"
+  email_label: "Email"
+  email: "hello@reallygreatsite.com"
+
+follow:
+  linkedin_label: "LinkedIn"
+  linkedin_url: "https://www.linkedin.com/in/michaelberthold/"
+  bluesky_label: "Bluesky"
+  bluesky_url: "https://bsky.app/profile/mrberthold.bsky.social"
+
+downloads_text: "Please email us about any adjustments you may need."

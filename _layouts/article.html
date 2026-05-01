@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="article-page">
+  <header class="article-subpage-intro">
+    <div class="container article-shell">
+      <p class="article-subpage-kicker">MUSINGS</p>
+
+      <h1 class="article-subpage-title">{{ page.title }}</h1>
+
+      <div class="article-subpage-meta">
+        {% if page.date %}
+        <p class="article-subpage-date">{{ page.date | date: "%B %d, %Y" }}</p>
+        {% endif %}
+
+        {% if page.author_line %}
+        <p class="article-subpage-author">{{ page.author_line }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="container article-body article-shell">
+    {{ content }}
+  </div>
+</article>
