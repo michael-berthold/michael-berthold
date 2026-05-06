@@ -19,27 +19,41 @@ permalink: /musings/
 <section class="section musings-listing musings-listing-cards">
   <div class="container">
     {% assign all_musings = site.musings | sort: 'date' | reverse %}
+
     <div class="musings-subpage-grid">
       {% for post in all_musings %}
-      <a href="{{ post.url | relative_url }}" class="musing-home-card musing-home-card-subpage musing-home-card-link">
-        <div class="musing-tile musing-tile-subpage {% if forloop.first %}musing-tile-accent{% else %}musing-tile-dark{% endif %}">
+
+      <a href="{{ post.url | relative_url }}" class="musing-home-card musing-home-card-link">
+
+        <!-- TILE (same as on index) -->
+        <div class="musing-tile {% if forloop.first %}musing-tile-accent{% else %}musing-tile-dark{% endif %}">
+          
           <div class="musing-tile-top">
             <div class="musing-tile-number">{{ forloop.index | prepend: '0' }}</div>
             <div class="musing-tile-arrow">→</div>
           </div>
 
           <div class="musing-tile-body">
-            <h2>{{ post.title }}</h2>
+            <h3>{{ post.title }}</h3>
             <p class="musing-tile-date">{{ post.date | date: "%B %d, %Y" }}</p>
           </div>
 
-          <div class="musing-tile-actions">
-            <span class="button-outline {% if forloop.first %}button-outline-dark{% else %}button-outline-light{% endif %}">
-              Read more
-            </span>
-          </div>
         </div>
+
+        <!-- EXCERPT (under the card, as on index) -->
+        <p class="musing-tile-excerpt">
+          {{ post.excerpt }}
+        </p>
+
+        <!-- CTA (as on index) -->
+        <div class="musing-tile-actions">
+          <span class="button-outline {% if forloop.first %}button-outline-dark{% else %}button-outline-light{% endif %}">
+            Read more
+          </span>
+        </div>
+
       </a>
+
       {% endfor %}
     </div>
   </div>
