@@ -11,10 +11,10 @@ author_line: "By Michael R. Berthold"
 featured: true
 
 link_1_url: "https://www.it-daily.net/it-management/ki/ki-jemals-vertrauen-koennen"
-link_1_label: "Read more"
+link_1_label: "Zum Artikel"
 
-link_2_url: "https://www.it-daily.net/it-management/ki/ki-jemals-vertrauen-koennen"
-link_2_label: "Link 2"
+link_2_url: "https://michael-berthold.github.io/musings/2026-04-15-trusting-ai/"
+link_2_label: "English Version"
 
 lang: de
 seo_title: "Zusammenarbeit zwischen Mensch und KI: Werden wir KI jemals vertrauen können?"
