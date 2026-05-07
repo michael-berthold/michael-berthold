@@ -1,3 +1,29 @@
+## Select Thought Leadership / Industry Commentary
+
+- Berthold, Michael [_Werden wir KI jemals vertrauen können?_](https://www.it-daily.net/it-management/ki/ki-jemals-vertrauen-koennen), **it-daily.net**, 13 April 2026.
+
+- Berthold, Michael [_Starten, lernen, verbessern. Playbook für KI-Agenten_](https://www.computerworld.ch/themen/kuenstliche-intelligenz-ki/starten-lernen-verbessern), **Computerworld.ch**, 13 April 2026.
+
+- Berthold, Michael [_Bias in KI ist schlecht – oder etwa doch nicht?_](https://www.bigdata-insider.de/bias-kuenstliche-intelligenz-probleme-auswirkungen-a-28e20a7fd7466770f90ef477d3686a17/), **BigData-Insider**, 4 March 2026.
+
+-   Berthold, Michael. [_3 risks hindering enterprise-ready AI --- and how low-code workflows help_](https://www.techradar.com/pro/3-risks-hindering-enterprise-ready-ai-and-how-low-code-workflows-help), **TechRadar**, 27 January 2026.
+
+-   Berthold, Michael. _Are Your AI Co-Pilots Trapping Data in Isolated Silos?_, **The New Stack**, 9 September 2025.
+
+-   Berthold, Michael. _Data Science -- ist Künstliche Intelligenz die Zukunft der Datenarbeit?_, **BigData-Insider**, 23 December 2024.
+
+-   Berthold, Michael. _Missing the T? Data Storage ETL an Oversight, says KNIME CEO._, **Solutions Review** (Expert Insights), 30 March 2023.
+
+-   Berthold, Michael. _How visual programming powers complex data science_, **TechRadar**, 1 June 2021.
+
+## Books
+
+-   Berthold, Michael R.; Borgelt, Christian; Höppner, Frank; Klawonn, Frank; Silipo, Rosaria. _Guide to Intelligent Data Science_, Springer-Verlag, 2020.
+
+-   Berthold, Michael R.; Borgelt, Christian; Höppner, Frank; Klawonn, Frank. _Guide to Intelligent Data Analysis: How to Intelligently Make Sense of Real Data_, Springer-Verlag, 2010.
+
+-   Berthold, Michael R.; Hand, David J. _Intelligent Data Analysis: An Introduction_, 2^nd^ revised edition, Springer Verlag, 2003.
+
 ## Edited Volumes
 
 -   Berthold, Michael R.; Feelders, Ad; Krempl, Georg (Eds.) _Advances in Intelligent Data Analysis XVIII: 18th International Symposium on Intelligent Data Analysis, IDA 2020_, Springer Verlag, 2020.
