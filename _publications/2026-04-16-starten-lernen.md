@@ -11,7 +11,7 @@ author_line: "By Michael R. Berthold"
 featured: true
 
 link_1_url: "https://www.computerworld.ch/themen/kuenstliche-intelligenz-ki/starten-lernen-verbessern"
-link_1_label: "Read more"
+link_1_label: "Zum Artikel"
 
 link_2_url: ""
 link_2_label: ""
