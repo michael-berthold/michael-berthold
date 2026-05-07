@@ -13,8 +13,8 @@ featured: true
 link_1_url: "https://www.computerworld.ch/themen/kuenstliche-intelligenz-ki/starten-lernen-verbessern"
 link_1_label: "Zum Artikel"
 
-link_2_url: ""
-link_2_label: ""
+link_2_url: "https://michael-berthold.github.io/musings/2026-03-18-bootstrapping-agents/"
+link_2_label: "English Version"
 
 lang: de
 seo_title: "Starten, lernen, verbessern - Playbook für KI-Agenten"
