@@ -13,8 +13,8 @@ featured: true
 link_1_url: "https://www.bigdata-insider.de/bias-kuenstliche-intelligenz-probleme-auswirkungen-a-28e20a7fd7466770f90ef477d3686a17/"
 link_1_label: "Read more"
 
-link_2_url: ""
-link_2_label: ""
+link_2_url: "https://michael-berthold.github.io/musings/2026-03-04-bias-in-ai-is-bad-but-is-it-really/"
+link_2_label: "English Version"
 
 lang: de
 seo_title: "Bias in KI ist schlecht – oder etwa doch nicht?"
