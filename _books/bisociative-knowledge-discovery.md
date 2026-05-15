@@ -6,7 +6,7 @@ date: 2012-01-01
 excerpt: "Modern knowledge discovery methods enable users to discover complex patterns of various types in large information repositories. The focus of this book, and the BISON project from which the contributions are originating, is a network based integration of various types of data repositories and the development of new ways to analyse and explore the resulting gigantic information networks."
 cover: "/assets/img/books/Michael-Berthold-Books-Bisociative-Knowledge-Discovery.webp"
 alt: "Cover of Bisociative Knowledge Discovery"
-button_label: "Book website - Open Access"
+button_label: "The Book - Open Access"
 button_style: "accent"
 external_url: "https://link.springer.com/content/pdf/10.1007/978-3-642-31830-6.pdf"
 lang: en
