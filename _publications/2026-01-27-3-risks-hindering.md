@@ -8,7 +8,7 @@ alt: "Placeholder cover image for 3 risks hindering enterprise-ready AI — and 
 source_name: "Techradar"
 author_line: "By Michael R. Berthold"
 
-featured: true
+featured: false
 
 link_1_url: "https://www.techradar.com/pro/3-risks-hindering-enterprise-ready-ai-and-how-low-code-workflows-help"
 link_1_label: "Read more"
