@@ -8,7 +8,7 @@ alt: "Placeholder cover image for Are Your AI Co-Pilots Trapping Data in Isolate
 source_name: "The New Stack"
 author_line: "By Michael R. Berthold"
 
-featured: true
+featured: false
 
 link_1_url: "https://thenewstack.io/are-your-ai-co-pilots-trapping-data-in-isolated-silos/"
 link_1_label: "Read more"
